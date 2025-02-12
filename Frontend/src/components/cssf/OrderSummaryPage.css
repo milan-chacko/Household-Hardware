@@ -1,0 +1,149 @@
+/* Container Styling */
+.order-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    padding-top: 7rem;
+    background-color: #BAC8CD;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Content Wrapper */
+  .order-summary-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  /* Headings */
+  h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Section Styling */
+  .user-details,
+  .cart-details,
+  .order-totals {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  /* Text and Labels */
+  p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  p strong {
+    color: #222;
+  }
+  
+  /* Cart Item Styles */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+  }
+  
+  .cart-item p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Totals Section */
+  .order-totals {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .order-totals p em {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Button Styling */
+  button.confirm-pay {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  button.confirm-pay:hover {
+    background-color: #0056b3;
+  }
+  
+  button.confirm-pay:focus {
+    outline: none;
+  }
+
+  .online-pay {
+    background-color: #0056b3;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .online-pay:hover {
+    background-color: #1b57e2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .order-summary-content {
+      padding: 15px;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .item-image {
+      margin-bottom: 10px;
+    }
+  }
+  

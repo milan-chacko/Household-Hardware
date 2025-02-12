@@ -1,0 +1,205 @@
+/* Dashboard Container */
+.dashboard-containerr {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  margin: 0;
+  padding: 0;
+  font-family: 'NOW', Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebarr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #80929B; /* Deep Brown */
+  color: #37474F; /* Light Cream */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transform: translateX(-100%); /* Hidden by default */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Sidebar Header */
+.sidebar-headerr {
+  padding: 20px;
+  padding-top: 5rem;
+  font-size: 18px;
+  color: #37474F; /* Earthy Brown */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.sidebar-headerr h2 {
+  font-size: 20px;
+  color: #37474F; /* Soft Tan */
+}
+
+/* Sidebar Open State */
+.sidebarr.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+/* Sidebar Menu */
+.sidebar-menuu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menuu li {
+  margin: 10px 0;
+}
+
+.sidebar-menuu a {
+  text-decoration: none;
+  color: #37474F; /* Warm Beige */
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-menuu a:hover {
+  background-color: #59463F; /* Muted Brown */
+}
+
+/* Logout Button */
+.logout-buttonn {
+  margin-top: auto;
+  padding: 10px;
+  width: 100%;
+  background-color: #37474F; /* Earthy Brown */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-buttonn:hover {
+  background-color: #D4B49A; /* Soft Tan */
+}
+
+/* Sidebar Toggle Button */
+.sidebar-togglee {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background-color: #A78C7B; /* Warm Beige */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.sidebar-togglee:hover {
+  background-color: #F0E0D6; /* Light Cream */
+}
+
+/* Overlay */
+.sidebar-overlayy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Main Content */
+.main-contentt {
+  flex-grow: 1;
+  margin-left: 0;
+  padding: 0px;
+  background-color:#37474F; /* Muted Brown */
+  color: #37474F;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.main-contentt.shiftedd {
+  margin-left: 250px; /* Adjusts when sidebar is open */
+}
+
+/* Login Reminder Text */
+.login-reminder {
+  font-size: 16px;
+  color: #37474F; /* Warm Beige */
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Login Button */
+.login-button {
+  margin-top: auto;
+  padding: 10px;
+  width: 100%;
+  background-color: #37474F; /* Earthy Brown */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active States for Login Button */
+.login-button:hover {
+  background-color: #D4B49A; /* Soft Tan */
+}
+
+.login-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Center Content for Login Reminder and Button */
+.sidebar-headerr .login-reminder,
+.sidebar-headerr .login-button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .sidebarr {
+      width: 200px;
+  }
+
+  .button-container {
+      margin: 0 auto;
+      max-width: 179px;
+  }
+
+  .logout-buttonn {
+      min-width: 179px;
+  }
+
+  .main-contentt.shiftedd {
+      margin-left: 200px;
+  }
+
+  .sidebar-togglee {
+      top: 0.5rem;
+      left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebarr {
+      width: 100%;
+  }
+
+  .main-contentt.shiftedd {
+      margin-left: 0;
+  }
+}

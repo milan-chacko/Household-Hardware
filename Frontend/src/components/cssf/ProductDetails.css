@@ -1,0 +1,128 @@
+/* Ensure the page fills the entire screen */
+.product-detail-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Stretch the container to fit the screen width while keeping padding */
+.product-detail-container {
+  display: flex;
+  flex-direction: row;
+  background: #EBEFF0  ;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%; /* Takes 90% of the screen width */
+  max-width: 1200px; /* Ensures it doesn't become too wide on larger screens */
+  height: 80vh; /* Takes 80% of the screen height */
+  gap: 20px;
+}
+
+/* Ensure the image fills its allocated space */
+.product-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Takes full height of the container */
+}
+
+.product-detail-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: contain; /* Ensures the image is scaled proportionally */
+}
+
+/* Product information fills the rest of the screen */
+.product-info-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+.product-name {
+  font-size: 28px;
+  margin-bottom: 9rem;
+  color: #333;
+}
+
+.product-descriptionn {
+  font-size: 16px;
+  margin-top:-12px;
+  color: #555;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.quantity-container button {
+  background: #ccc;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quantity-container button:hover {
+  background: #bbb;
+}
+
+.quantity-container span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-to-cart-button {
+  background: #28a745;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background: #218838;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: green;
+  font-size: 0.9rem;
+}
+
+.add-to-cart-button[disabled] {
+  background-color: gray;
+  cursor: not-allowed;
+}

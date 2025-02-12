@@ -1,0 +1,385 @@
+/* Homepage.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add these to your existing Home.css */
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.main-container {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f8fc;
+  overflow: visible;
+}
+
+/* Navigation Styles */
+.nav-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #37474f;
+  height: 10vh;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  flex-grow: 1;
+  min-height: auto;
+  height: auto;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Buttons */
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 20;
+}
+
+.slide-nav:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slide-nav.prev {
+  left: 1rem;
+}
+
+.slide-nav.next {
+  right: 1rem;
+}
+
+.slide-nav svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 1rem;
+  background-color: white;
+}
+
+/* Hero Section Styles */
+.hero-container {
+  position: relative;
+  height: 70vh;
+  padding: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  height: 20rem;
+}
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  color: #ccc;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  max-width: 80%;
+}
+
+.decorative-lines {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 33%;
+  overflow: hidden;
+  opacity: 0.2;
+  background-color: #546e7a;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background-color: #ffffff;
+  transform: rotate(12deg) translateX(2rem);
+}
+
+/* Services Section Styles */
+.services-container {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color:#BAC8CD;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+.services-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content:space-evenly;
+  gap: 20px;
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto; /* Center it */
+  padding: 20px;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-section img {
+  width:17rem;
+  height: 17rem;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.bottom-text {
+  flex: 1; /* Takes remaining space */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  font-family: sans-serif;
+  text-align: left; /* Ensures text stays aligned left */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .bottom-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-section img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bottom-text {
+    text-align: center;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: #FFE7AE;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  background-color: #FFD99B;
+}
+
+.card-image {
+  flex-grow: 1;
+  background-color: #eceff1;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 0; /* Allows the image container to shrink */
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.service-card button {
+  font-size: 0.875rem;
+  color: #444;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Social Icons Styles */
+.social-container {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #b0bec5;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.heart-button {
+  padding: 0.5rem;
+  background-color: #90a4ae;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.likes-count {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.map-container {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.details{
+  margin-top: 2rem;
+}
+
+.details p{
+  margin-bottom: 10px;
+}
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  .nav-container {
+    height: 8vh;
+  }
+
+  .hero-container {
+    height: 42vh;
+  }
+
+  .services-container {
+    height: 50vh;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+}

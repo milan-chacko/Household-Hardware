@@ -1,0 +1,166 @@
+
+.orders-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header & Back Button */
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #333;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  margin-right: 8px;
+}
+
+/* Orders Grid */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* Order Card */
+.order-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Order Status */
+.order-status {
+  background: #3b82f6;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Order Summary */
+.order-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.product-image-containerr {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-id {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Order Details */
+.order-details {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.order-details h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.order-details p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.my{
+  background-color: #eaf1ec;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.cart-item-image-container {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.cart-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+/* Total Amount */
+.total-amount {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}

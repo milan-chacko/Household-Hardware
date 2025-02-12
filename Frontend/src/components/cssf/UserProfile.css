@@ -1,0 +1,221 @@
+/* General container styling */
+form{
+  background:#BAC8CD;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.main-contentt{
+  background-color: #BAC8CD;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 30px auto;
+    margin-bottom: 83px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .profile-heading {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Details heading */
+  .details-heading {
+    font-size: 20px;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraph styling */
+  .profile-details {
+    padding: 20px;
+  }
+
+  .profile-details p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .profile-details strong {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  /* Button container */
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Edit button styling */
+  .edit-button {
+    background-color: #3498db;
+  }
+  
+  .edit-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .orders-button {
+    background-color: #2ecc71;
+    width:120px;
+  }
+  
+  .orders-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Loading State */
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #3498db;
+    margin-top:25rem;
+  }
+  
+  /* Not Found */
+  .not-found {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+    margin-top: 20px;
+  }
+
+  /* Modal Container */
+.edit-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: beige;
+  width: 700px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Header */
+.edit-form h2 {
+  text-align: center;
+  color: #161A42;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+
+/* Form Label */
+.edit-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.edit-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.edit-form input:focus {
+  border-color: #1468BF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(20, 104, 191, 0.5);
+}
+
+/* Modal Buttons Container */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Save Button */
+.modal-buttons button[type="submit"] {
+  background: #1468BF;
+  color: #fff;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background: #FF6844;
+  transform: scale(1.05);
+}
+
+/* Cancel Button */
+.modal-buttons button[type="button"] {
+  background: #ddd;
+  color: #555;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background: #bbb;
+  transform: scale(1.05);
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .profile-container {
+      padding: 15px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }

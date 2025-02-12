@@ -1,0 +1,106 @@
+body{
+  background:  #BAC8CD;
+}
+.containner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75.7vh;
+  margin-bottom: 3px;
+  width: 100%;
+  background-color:  #BAC8CD;
+}
+
+.form{
+  background-color:  #80929B;
+}
+
+.form-wrapper {
+  max-width: 550px;
+  background:  #80929B;  border-radius: 40px;
+  padding: 25px 80px;
+  border: 5px solid #17181D; /* Matches the background */
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 30px -20px; /* Subtle dark shadow */
+}
+
+.heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: #FCD988; /* Golden highlight */
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.form .input {
+  width: 100%;
+  background: #17181D; /* Dark input background */
+  border: none;
+  padding: 20px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: #292C35 0px 10px 10px -5px; /* Slight shadow */
+  border-inline: 2px solid transparent;
+  color: #FCD988; /* Light text color */
+}
+
+.form .input::-moz-placeholder {
+  color: rgba(252, 217, 136, 0.6); /* Placeholder in light gold */
+}
+
+.form .input::placeholder {
+  color: rgba(252, 217, 136, 0.6);
+}
+
+.form .input:focus {
+  outline: none;
+  border-inline: 2px solid #E09145; /* Orange border for focus */
+}
+
+.form .forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.form .forgot-password a {
+  font-size: 20px;
+  color: #1f5ceb; /* Orange link color */
+  text-decoration: none;
+}
+
+.form .forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.form .login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #E09145 0%, /* Orange gradient start */
+    #FCD988 100% /* Golden gradient end */
+  );
+  color: #17181D; /* Dark text color */
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form .login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 23px 10px -20px;
+}
+
+.form .login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 15px 10px -10px;
+}

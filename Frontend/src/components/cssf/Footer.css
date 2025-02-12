@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    background-color: #37474f;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Ensures it stays at the bottom */
+    bottom: 0;
+  }
+  .p{
+    color:#fff;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 0.9rem;
+    }
+  }
+  

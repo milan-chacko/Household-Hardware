@@ -1,0 +1,129 @@
+
+.order-details-container {
+    padding: 20px;
+    background-color: #BAC8CD;
+    font-family: Arial, sans-serif;
+    height:54rem;
+  }
+  
+  .order-info {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-info h2 {
+    margin-bottom: 20px;
+  }
+
+  .order-tracking{
+    margin-top: 3rem;
+
+  }
+
+  .order-tracking h3{
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .item-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 15px;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .item-details p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .status-confirmed {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .status-dispatched {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .status-delivered {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .timeline {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding-top: 3rem;
+  }
+  
+  .timeline-step {
+    text-align: center;
+    color: #ccc;
+    position: relative;
+  }
+  
+  .timeline-step.active {
+    color: #28a745;
+  }
+  
+  .timeline-step .icon {
+    font-size: 24px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  .timeline-step.active .icon {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .timeline-connector {
+    flex: 1;
+    height: 4px;
+    background: #ccc;
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .timeline-connector.active {
+    background: #28a745;
+  }
+  
+  .timeline-date {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 5px;
+  }
+  
