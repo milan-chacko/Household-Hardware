@@ -230,6 +230,12 @@ body, html {
     border-radius: 8px;
     margin-right: 1rem;
 }
+.rejection-reason {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
 
 @keyframes pulse {
     0%, 100% {
