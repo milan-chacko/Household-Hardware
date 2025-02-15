@@ -68,7 +68,7 @@ const Sidebar = ({ firstname, handleLogout }) => {
                 Edit
               </NavLink>
             </li>
-            {/* <li>
+            <li>
               <NavLink
                 to="/filter"
                 className={({ isActive }) => isActive ? "active-link" : ""}
@@ -76,7 +76,7 @@ const Sidebar = ({ firstname, handleLogout }) => {
               >
                 Orders
               </NavLink>
-            </li> */}
+            </li>
             <li>
               <NavLink
                 to="/sales"

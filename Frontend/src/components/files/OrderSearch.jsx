@@ -31,24 +31,24 @@ export default function OrderSearch() {
   }, [orderId, orders]);
 
   return (
-    <div className="order-search-container">
+    <div className="0order-search-container">
       <h2>Search Order</h2>
-      <div className="input-wrapper">
+      <div className="iinput-wrapper">
         <motion.input
           whileFocus={{ scale: 1.05 }}
           type="text"
           placeholder="Enter Order ID"
           value={orderId}
           onChange={(e) => setOrderId(e.target.value)}
-          className="order-id-input"
+          className="mm"
         />
       </div>
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="eerror-message">{error}</p>}
       <div className="order-cards">
         {filteredOrders.map((order) => (
           <motion.div 
             key={order._id} 
-            className="order-card"
+            className="oorder-card"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -60,13 +60,13 @@ export default function OrderSearch() {
             <h4>Items:</h4>
             <ul>
               {order.cartItems.map((item) => (
-                <li key={item.productId._id} className="order-item">
+                <li key={item.productId._id} className="oorder-item">
                   {/* Display product image */}
                   {item.productId.productImage && (
                     <img 
                       src={`http://localhost:5555/${item.productId.productImage}`} 
                       alt={item.productId.productName} 
-                      className="product-image" 
+                      className="pproduct-image" 
                     />
                   )}
                   <span>{item.productId.productName} - {item.quantity} pcs</span>

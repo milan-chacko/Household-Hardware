@@ -1,171 +1,174 @@
 /* Main container */
-.order-search-container {
-    padding: 2rem;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 1200px; /* Ensure a max width */
+
+.mm {
+  width: 89%;
+}
+.oorder-search-container {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1200px; /* Ensure a max width */
+}
+
+/* Heading */
+.oorder-search-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Input field container (aligned left and right) */
+.oorder-search-container .input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Input field */
+.oorder-search-container .order-id-input {
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.oorder-search-container .order-id-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+/* Error message */
+.oorder-search-container .error-message {
+  color: #f87171;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Order cards container */
+.oorder-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Order card */
+.oorder-card {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+  width: calc(90% - 1rem); /* Adjust width for 2 columns on desktop */
+}
+
+.oorder-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading in order card */
+.oorder-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Order details in card */
+.oorder-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+/* Items list heading */
+.oorder-card h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* List of items */
+.oorder-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.oorder-card li {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Image styles for products */
+.pproduct-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Styling for each order item */
+.oorder-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for mobile and tablet devices */
+@media (max-width: 1024px) {
+  /* Order card width adjustment for tablet */
+  .oorder-card {
+    width: calc(50% - 1rem); /* 2 columns on tablet */
   }
-  
-  /* Heading */
-  .order-search-container h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* Order card width adjustment for mobile */
+  .oorder-card {
+    width: 100%; /* 1 column on mobile */
   }
-  
-  /* Input field container (aligned left and right) */
-  .order-search-container .input-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+
+  /* Input field adjustments for mobile */
+  .oorder-search-container .oorder-id-input {
+    padding: 0.7rem;
+    max-width: 100%;
   }
-  
-  /* Input field */
-  .order-search-container .order-id-input {
-    padding: 0.8rem;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    transition: transform 0.3s ease-in-out;
+
+  /* Adjust container padding on mobile */
+  .oorder-search-container {
+    padding: 1.5rem;
   }
-  
-  .order-search-container .order-id-input:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-  }
-  
-  /* Error message */
-  .order-search-container .error-message {
-    color: #f87171;
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  
-  /* Order cards container */
-  .order-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  /* Order card */
-  .order-card {
-    padding: 1rem;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
-    width: calc(90% - 1rem); /* Adjust width for 2 columns on desktop */
-  }
-  
-  .order-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Heading in order card */
-  .order-card h3 {
+
+  /* Adjust heading font size on mobile */
+  .oorder-search-container h2 {
     font-size: 1.25rem;
-    font-weight: bold;
-    color: #333;
   }
-  
-  /* Order details in card */
-  .order-card p {
-    font-size: 1rem;
-    color: #555;
-    margin: 0.5rem 0;
+
+  /* Adjust order card padding on mobile */
+  .oorder-card {
+    padding: 1rem;
   }
-  
-  /* Items list heading */
-  .order-card h4 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 1rem;
+
+  /* Adjust heading size in order card for mobile */
+  .oorder-card h3 {
+    font-size: 1.15rem;
   }
-  
-  /* List of items */
-  .order-card ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-top: 0.5rem;
-  }
-  
-  .order-card li {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  /* Image styles for products */
-  .product-image {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  /* Styling for each order item */
-  .order-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Responsive adjustments for mobile and tablet devices */
-  @media (max-width: 1024px) {
-    /* Order card width adjustment for tablet */
-    .order-card {
-      width: calc(50% - 1rem); /* 2 columns on tablet */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    /* Order card width adjustment for mobile */
-    .order-card {
-      width: 100%; /* 1 column on mobile */
-    }
-  
-    /* Input field adjustments for mobile */
-    .order-search-container .order-id-input {
-      padding: 0.7rem;
-      max-width: 100%;
-    }
-  
-    /* Adjust container padding on mobile */
-    .order-search-container {
-      padding: 1.5rem;
-    }
-  
-    /* Adjust heading font size on mobile */
-    .order-search-container h2 {
-      font-size: 1.25rem;
-    }
-  
-    /* Adjust order card padding on mobile */
-    .order-card {
-      padding: 1rem;
-    }
-  
-    /* Adjust heading size in order card for mobile */
-    .order-card h3 {
-      font-size: 1.15rem;
-    }
-  }
-  
+}
