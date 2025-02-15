@@ -99,7 +99,7 @@ const AdminPage = () => {
                   <h4 className="pp"><strong>Drop Location:</strong> {order.userId.location}</h4>
                   <h4 className="pp"><strong>Quantity:</strong> {order.totals.quantity}</h4>
                   <h4 className="pp"><strong>Amount:</strong> ₹{order.totals.amount}</h4>
-                  <h4 className="pp"><strong>Status:</strong> {order.status}</h4>
+                  <h4 className="pp"><strong>Status:</strong> {order.paymentMethod}</h4>
                 </Details>
 
                 {/* Action buttons at the bottom */}

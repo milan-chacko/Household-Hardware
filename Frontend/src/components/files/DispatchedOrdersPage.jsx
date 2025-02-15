@@ -145,7 +145,7 @@ const DispatchedOrdersPage = () => {
                 <strong>Drop Location:</strong> {order.userId.location}
               </div>
               <div className="card__subtitle">
-                <strong>Status:</strong> {order.status}
+                <strong>Status:</strong> {order.paymentMethod}
               </div>
               <div className="card__wrapper">
                 <button
