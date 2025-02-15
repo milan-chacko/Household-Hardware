@@ -10,6 +10,11 @@ const Sales = () => {
   const authApi = React.useContext(Authapi);
   const navigate = useNavigate();
   const firstname = localStorage.getItem("firstname"); // Retrieve firstname
+  const role= localStorage.getItem("role");
+
+  if (role !== "admin") {
+    navigate('/'); // Redirect to the dashboard
+  }
 
   useEffect(() => {
    

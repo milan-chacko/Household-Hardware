@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Sidebar = ({ firstname, handleLogout }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate=useNavigate();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  const role= localStorage.getItem("role");
+
+  if (role !== "admin") {
+    navigate('/'); // Redirect to the dashboard
+  }
 
   return (
     <>

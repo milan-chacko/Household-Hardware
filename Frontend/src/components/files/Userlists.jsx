@@ -6,6 +6,13 @@ const UsersPage = () => {
   const [users, setUsers] = useState([]); // Store user details
   const [userCount, setUserCount] = useState(0); // Store the total count of users
 
+  const role= localStorage.getItem("role");
+
+  if (role !== "admin") {
+    navigate('/'); // Redirect to the dashboard
+  }
+
+
   // Fetch users from the backend
   useEffect(() => {
     const fetchUsers = async () => {

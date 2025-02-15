@@ -3,6 +3,13 @@ import Sidebar from './Sidebar';
 
 const Profile = () => {
   const firstname = localStorage.getItem('firstname'); // Retrieve firstname
+
+  const role= localStorage.getItem("role");
+
+  if (role !== "admin") {
+    navigate('/'); // Redirect to the dashboard
+  }
+
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
