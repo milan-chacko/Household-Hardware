@@ -69,7 +69,7 @@ const Home = () => {
   return (
     <div className="main-container">
       <nav className="nav-container">
-        <div className="logo">NADAKKADAVUNKAL HARDWARE</div>
+        <div className="logo">HOUSEHOLD HARDWARE</div>
       </nav>
 
       <div className="content-wrapper">
@@ -174,7 +174,7 @@ const Home = () => {
         <div className="mr-6">
           <img
             src="/images/NHpic.jpeg"
-            alt="Nadakkadavunkal Hardwares"
+            alt="Household Hardwares"
             className="w-[200px] h-[200px] rounded-xl object-cover"
           />
         </div>

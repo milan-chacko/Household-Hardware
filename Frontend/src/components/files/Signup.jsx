@@ -68,7 +68,7 @@ const Signup = () => {
   return (
     <>
      <nav className="nav-container">
-        <div className="logo">NADAKKADAVUNKAL HARDWARE</div>
+        <div className="logo">HOUSEHOLD HARDWARE</div>
       </nav>
       <IoHome className="iconn-home" onClick={()=>{navigate('/')}}/>
 

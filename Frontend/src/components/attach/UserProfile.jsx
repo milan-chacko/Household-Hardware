@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { IoKeyOutline } from "react-icons/io5";
 import "../cssf/UserProfile.css"; // Import the external CSS file
 import Footer from "../components/Footer";
+import BackButton from "../BackButton";
 
 const UserProfile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -129,6 +130,8 @@ const UserProfile = () => {
 
   return (
     <>
+     <div style={{padding:"17px 0px 0px 5rem" }}><BackButton/>
+     </div>
     <div className="profile-container">
       <StyledWrapper>
         <div className="card">

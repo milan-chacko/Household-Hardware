@@ -144,7 +144,7 @@ const navigate = useNavigate();
       </button>
     </div>
     <FooterWrapper>
-     <p>&copy; {new Date().getFullYear()} Nadakkadavunkal Hardwares. All rights reserved.</p>
+     <p>&copy; {new Date().getFullYear()} Household Hardwares. All rights reserved.</p>
    </FooterWrapper>
     </>
   );

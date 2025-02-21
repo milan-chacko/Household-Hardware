@@ -67,7 +67,7 @@ const ContactUs = () => {
   return (
     <>
       <nav className="nav-container">
-        <div className="logo">NADAKKADAVUNKAL HARDWARE</div>
+        <div className="logo">Household HARDWARE</div>
       </nav>
       <div className="bgc">
         <IoHome className="icon-home" onClick={()=>{navigate('/')}}/>

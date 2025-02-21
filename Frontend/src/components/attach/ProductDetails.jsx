@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../cssf/ProductDetails.css";
 import Footer from "../components/Footer";
+import BackButton from "../BackButton";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState(null);
@@ -116,7 +117,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <>
+    <><div className="cntrl"><BackButton/></div>
     <div className="product-detail-page">
       <div className="product-detail-container">
         <div className="product-image-container">

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios"; // Make sure axios is imported
 import "../cssf/OrderSummaryPage.css"; // Add styling as needed
 import Footer from "../components/Footer";
+import BackButton from "../BackButton";
 
 const OrderSummaryPage = () => {
   const location = useLocation();
@@ -153,6 +154,10 @@ const OrderSummaryPage = () => {
 
   return (
     <>
+      <div style={{ padding: "17px 0px 0px 5rem" }}>
+        {" "}
+        <BackButton/>
+      </div>
       <div className="order-summary-container">
         <div className="order-summary-content">
           <h2>Order Summary</h2>

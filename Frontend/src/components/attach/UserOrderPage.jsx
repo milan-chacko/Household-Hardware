@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../cssf/UserOrderPage.css";
 import styled from "styled-components";
 import Footer from "../components/Footer";
+import BackButton from "../BackButton";
 
 const UserOrderPage = () => {
   const [orders, setOrders] = useState([]);
@@ -106,6 +107,10 @@ const UserOrderPage = () => {
 
   return (
     <>
+      <div style={{ padding: "17px 0px 0px 5rem" }}>
+        {" "}
+        <BackButton />
+      </div>
       <div className="orders-container">
         <div className="orders-header">
           <h1>Your Orders</h1>

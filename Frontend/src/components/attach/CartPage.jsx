@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 import '../cssf//CartPage.css';
+import BackButton from '../BackButton';
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -95,6 +96,8 @@ const CartPage = () => {
 
   return (
     <>
+    <div style={{padding:"17px 0px 0px 5rem" }}>    <BackButton/>
+    </div>
     <div className="cart-container">
       <div className="cart-main">
         <div className="cart-items">
@@ -160,7 +163,7 @@ const CartPage = () => {
 </button>
     </div>
       <FooterWrapper>
-      <p>&copy; {new Date().getFullYear()} Nadakkadavunkal Hardwares. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Household Hardwares. All rights reserved.</p>
     </FooterWrapper>
     </>
   );

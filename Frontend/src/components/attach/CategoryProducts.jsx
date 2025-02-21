@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styled from "styled-components";
 import "../cssf/CategoryProducts.css";
+import BackButton from "../BackButton";
 
 const CategoryProducts = () => {
   const [products, setProducts] = useState([]);
@@ -32,6 +33,7 @@ const CategoryProducts = () => {
     <>
     <div className="products-page">
       <h1 className="h1">PRODUCTS IN {category}</h1>
+      <BackButton/>
       <div className="products-container">
         {products.length > 0 ? (
           products.map((product) => (
@@ -59,7 +61,7 @@ const CategoryProducts = () => {
      
     </div>
      <FooterWrapper>
-     <p>&copy; {new Date().getFullYear()} Nadakkadavunkal Hardwares. All rights reserved.</p>
+     <p>&copy; {new Date().getFullYear()} Household Hardwares. All rights reserved.</p>
    </FooterWrapper>
    </>
   );
