@@ -53,7 +53,7 @@ const UserOrder = () => {
         {/* Sidebar */}
         <aside className={`sidebarr ${isOpen ? "open" : ""}`}>
           <div className="sidebar-headerr">
-            <h2>{isAuthenticated ? `Welcome, ${firstname}!` : "Welcome!"}</h2>
+            <h2>{isAuthenticated ? `Hi, ${firstname}!` : "Welcome!"}</h2>
           </div>
           <nav>
             <ul className="sidebar-menuu">

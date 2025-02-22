@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import "../cssf/ProductPage.css";
+import BackButton from "../BackButton";
 
 const Productpageedit = () => {
     const [products, setProducts] = useState([]);
@@ -81,6 +82,10 @@ const Productpageedit = () => {
     return (
       <div className="products-page">
         <h1>Products in {category}</h1>
+        <div style={{ padding: "0px 0px 0px 1rem" }}>
+        {" "}
+        <BackButton/>
+      </div>
         <div className="products-container">
           {products.length > 0 ? (
             products.map((product) => (

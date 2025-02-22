@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import '../cssf/OrdersAdmin.css';
+import BackButton from "../BackButton";
 
 const AdminPage = () => {
   const [orders, setOrders] = useState([]);
@@ -66,6 +67,9 @@ const AdminPage = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
+    <>
+    <div style={{padding:"10px 0px 10px 3rem" }}>    <BackButton/>
+    </div>
     <PageWrapper>
       <Container>
         <h1>Admin Orders</h1>
@@ -123,6 +127,7 @@ const AdminPage = () => {
         )}
       </Container>
     </PageWrapper>
+    </>
   );
 };
 

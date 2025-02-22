@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../cssf/ProductsPage.css";
 import axios from "axios";
+import BackButton from "../BackButton";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]); // Holds the list of products
@@ -160,8 +161,10 @@ const ProductsPage = () => {
 
   return (
     <div className="products-page">
+      <div style={{padding:"10px 0px 0px 1rem" }}>    <BackButton/>
+      </div>
       <header className="products-header">
-        <h1>{isAddingProduct ? "Add Product" : "Products"}</h1>
+        <h1>{isAddingProduct ? "" : ""}</h1>
         <button className="toggle-button" onClick={toggleView}>
           {isAddingProduct ? "Show Products" : "Add Product"}
         </button>

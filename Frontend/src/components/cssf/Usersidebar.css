@@ -1,4 +1,8 @@
 /* Dashboard Container */
+.newS{
+  margin-left:0;
+}
+
 .dashboard-containerr {
   display: flex;
   height: 100vh; /* Full viewport height */

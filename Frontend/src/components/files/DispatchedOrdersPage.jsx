@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import "../cssf/DispatchedOrders.css";
 import { useNavigate } from "react-router-dom";
+import BackButton from "../BackButton";
 
 const DispatchedOrdersPage = () => {
   const [orders, setOrders] = useState([]);
@@ -60,6 +61,8 @@ const DispatchedOrdersPage = () => {
 
   return (
     <div>
+      <div style={{padding:"17px 0px 0px 5rem" }}>    <BackButton/>
+      </div>
       <h1>Dispatched Orders</h1>
       <div className="div2">
         <StyledWWrapper>

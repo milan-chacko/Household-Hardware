@@ -81,6 +81,12 @@ const CheckoutPage = () => {
       return;
     }
 
+    const phoneRegex = /^[6-9]\d{9}$/; // Indian phone number validation
+    if (!phoneRegex.test(formData.phonenumber)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
     let finalAmount = totals.amount;
 
     // Add extra ₹50 if Cash on Delivery is selected
@@ -102,6 +108,18 @@ const CheckoutPage = () => {
         amount: finalAmount,
       },
     };
+
+    try {
+      await axios.put(`http://localhost:5555/checkout/user/${userId}`, {
+        address: formData.address,
+        location: formData.location,
+        phonenumber: formData.phonenumber,
+      });
+    } catch (error) {
+      console.error("Error updating user details:", error);
+      alert("Failed to update your details. Please try again.");
+      return; // Exit if updating fails
+    }
 
     // Add submission logic here (e.g., send data to the server)
     alert(

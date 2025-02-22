@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../cssf/OrderSearch.css";
 import { motion } from "framer-motion";
+import BackButton from "../BackButton";
 
 export default function OrderSearch() {
   const [orderId, setOrderId] = useState("");
@@ -33,6 +34,10 @@ export default function OrderSearch() {
   return (
     <div className="0order-search-container">
       <h2>Search Order</h2>
+      <div style={{ padding: "0px 0px 10px 0vh" }}>
+        {" "}
+        <BackButton/>
+      </div>
       <div className="iinput-wrapper">
         <motion.input
           whileFocus={{ scale: 1.05 }}

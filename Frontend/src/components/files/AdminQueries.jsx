@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../cssf/AdminQueries.css";
 import Footer from "../components/Footer";
+import BackButton from "../BackButton";
 
 const AdminQueries = () => {
   const [pendingQueries, setPendingQueries] = useState([]);
@@ -83,10 +84,12 @@ const AdminQueries = () => {
 
   return (
     <>
-    <div className="alpp">
+    <div className="alpp"> <div style={{ padding: "0px 0px 0px 5rem" }}>
+        {" "}
+        <BackButton/>
+      </div>
     <div className="admin-queries-container">
       <h2>Admin Queries</h2>
-
       {/* Email Filter Input */}
       <div className="filter-container">
         <input

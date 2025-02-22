@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../cssf/CategoriesPage.css";
+import BackButton from "../BackButton";
 
 const CategoriesPage = () => {
   const [categories, setCategories] = useState([]);
@@ -24,6 +25,10 @@ const CategoriesPage = () => {
   };
 
   return (
+    <>        <div style={{ padding: "17px 0px 0px 2rem" }}>
+    {" "}
+    <BackButton/>
+  </div>
     <div className="categories-page">
       <h1>Categories</h1>
       <div className="categories-container">
@@ -46,6 +51,7 @@ const CategoriesPage = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

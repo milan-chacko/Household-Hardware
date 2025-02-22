@@ -11,7 +11,9 @@ import { Line } from "react-chartjs-2";
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
+  const [filteredCategories, setFilteredCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState(""); // New state for search input
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
   const position = [8.8932, 76.6141];
@@ -40,6 +42,7 @@ const Home = () => {
       .get("http://localhost:5555/categories")
       .then((response) => {
         setCategories(response.data);
+        setFilteredCategories(response.data); // Initialize filtered categories
         setLoading(false);
       })
       .catch((error) => {
@@ -66,6 +69,16 @@ const Home = () => {
     navigate(`/catproduct?category=${categoryName}`);
   };
 
+  const handleSearchChange = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+
+    // Filter categories based on search input
+    const filtered = categories.filter((category) =>
+      category.name.toLowerCase().includes(query)
+    );
+    setFilteredCategories(filtered);
+  }; 
   return (
     <div className="main-container">
       <nav className="nav-container">
@@ -130,7 +143,18 @@ const Home = () => {
         </div>
 
         {/* Services Grid */}
+        
         <div className="services-container">
+        <div className="homesearch-container">
+          <input
+            type="text"
+            placeholder="Search categories..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="homesearch-input"
+          />
+        </div>
+
           {loading ? (
             <div className="loading">
               <StyleddWrapper>
@@ -143,9 +167,9 @@ const Home = () => {
                 </div>
               </StyleddWrapper>
             </div>
-          ) : (
+          ) :filteredCategories.length > 0 ? (
             <div className="services-grid">
-              {categories.map((category) => (
+              {filteredCategories.map((category) => (
                 <div
                   key={category._id}
                   className="service-card"
@@ -166,6 +190,8 @@ const Home = () => {
                 </div>
               ))}
             </div>
+          ) : (
+            <p className="no-results">No categories found.</p>
           )}
         </div>
       </div>
@@ -182,16 +208,20 @@ const Home = () => {
         {/* Middle (Text Information) */}
         <div className="text-center md:text-left mb-4 md:mb-0 ">
           <div className="details">
-          <p>
-          <p> <strong>Nadakkadavunkal Hardwares</strong> <br /></p> 
-           <p> Edappalayam P.O, Edappalayam <br /></p>
-           <p> Kollam, Kerala <br /></p>
-          <p>  PIN: 691309 <br /></p>
-          <p>  Contact: 944755**** <br /></p>
-          </p>
+            <p>
+              <p>
+                Nadakkadavunkal Hardwares Edappalayam P.O, Edappalayam <br />
+                Kollam, Kerala <br />
+                PIN: 691309 <br />
+                Contact: 944755**** <br />
+              </p>
+            </p>
+            <Link to="/contact-us" className="contact-link">
+            Contact Us
+          </Link>
           </div>
-         
-          <Link to="/contact-us" className="contact-link">Contact Us</Link>
+
+        
         </div>
 
         {/* Right Side (Map) */}
@@ -199,7 +229,7 @@ const Home = () => {
           <MapContainer
             center={position}
             zoom={15}
-            style={{ width: "300px", height: "265px", borderRadius:"20px" }} // Ensuring visibility
+            style={{ width: "300px", height: "265px", borderRadius: "20px" }} // Ensuring visibility
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={position}>
