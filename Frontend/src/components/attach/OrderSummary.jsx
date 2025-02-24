@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { MessageCircle } from "lucide-react";
 import { Menu, X } from "lucide-react";
 import OrderSummaryPage from "./OrderSummaryPage";
 
@@ -132,6 +133,20 @@ const OrderSummary = () => {
                       </div>
                     </StyledWrapper>
                   </li>
+                  <li>
+                  <StyledWrapper>
+                    <div
+                      className="button-container"
+                      onClick={() => navigate("/chatai")}
+                    >
+                      <button
+                        className="button"
+                        onClick={() => navigate("/chatai")}
+                      >       <MessageCircle className="icon" size={20} style={{ marginRight: 8 }} />AI
+                      </button>
+                    </div>
+                  </StyledWrapper>
+                </li>
                 </>
               )}
               <li>

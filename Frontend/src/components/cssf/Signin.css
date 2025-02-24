@@ -1,14 +1,18 @@
 body{
-  background:  #BAC8CD;
+  background: #ffff;
 }
 .containner {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 75.7vh;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   width: 100%;
-  background-color:  #BAC8CD;
+  background-color: #FFFF;
+}
+
+.divicon{
+  background-color: #ffff;
 }
 
 .form{

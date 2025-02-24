@@ -21,6 +21,7 @@ import orderFilterRoute from "./routes/orderFilterRoute.js";
 import payRouter from "./routes/paymentRoute.js";
 import bcrypt from "bcryptjs";
 import queryRouter from "./routes/queryRoute.js";
+import aiRoute from "./routes/aiRoute.js";
 
 const app = express();
 app.use(cors());
@@ -49,6 +50,7 @@ app.use("/sales",chartRoute);
 app.use("/filter",orderFilterRoute);
 app.use("/api/payment",payRouter);
 app.use("/query",queryRouter);
+app.use("/ai",aiRoute);
 
 app.post("/:userId/change-password", async (req, res) => {
   try {

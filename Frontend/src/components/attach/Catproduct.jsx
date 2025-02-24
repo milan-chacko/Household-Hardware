@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Menu, X } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import CategoryProducts from './CategoryProducts';
 
 const Catproduct = () => {
@@ -133,6 +134,20 @@ const Catproduct = () => {
                        </div>
                      </StyledWrapper>
                    </li>
+                   <li>
+                  <StyledWrapper>
+                    <div
+                      className="button-container"
+                      onClick={() => navigate("/chatai")}
+                    >
+                      <button
+                        className="button"
+                        onClick={() => navigate("/chatai")}
+                      >       <MessageCircle className="icon" size={20} style={{ marginRight: 8 }} />AI
+                      </button>
+                    </div>
+                  </StyledWrapper>
+                </li>
                  </>
                )}
                <li>

@@ -37,6 +37,8 @@ import Search from './Search';
 import ContactUs from '../attach/ContactUs';
 import AdminQueries from './AdminQueries';
 import Query from './Query';
+import Chatai from '../attach/Chatai';
+import Chataipage from '../attach/Chataipage';
 
 const Roter = () => {
   const authApi = React.useContext(Authapi); // Get authentication status
@@ -75,6 +77,7 @@ const Roter = () => {
 <Route path="/contact-us" element={<ContactUs />} />
 <Route path="/sales" element={<Sales/>}/>
 <Route path="/query" element={<Query/>}/>
+<Route path="chatai" element = {<Chataipage/>}/>
 </Routes>
 // </Layout>
   );

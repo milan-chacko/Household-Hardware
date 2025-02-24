@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { MessageCircle } from "lucide-react";
+import styled from "styled-components";
 import { Menu, X } from "lucide-react";
-import UserProfile from "./UserProfile";
+import Chatai from "./Chatai";
 
-const Profile = () => {
+const Chataipage = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [firstname, setFirstname] = useState("User"); // Default to "User"
     const [isAuthenticated, setIsAuthenticated] = useState(false); // Track if the user is logged in
@@ -62,7 +62,10 @@ const Profile = () => {
                   {/* Home Button */}
                   <li>
                     <StyledWrapper>
-                      <div className="button-container"  onClick={() => navigate("/")}>
+                      <div
+                        className="button-container"
+                        onClick={() => navigate("/")}
+                      >
                         <button
                           className="button"
                           onClick={() => navigate("/")} // Navigate to Home
@@ -85,7 +88,10 @@ const Profile = () => {
                   {/* Profile Button */}
                   <li>
                     <StyledWrapper>
-                      <div className="button-container" onClick={() => navigate("/profile")}>
+                      <div
+                        className="button-container"
+                        onClick={() => navigate("/profile")}
+                      >
                         <button
                           className="button"
                           onClick={() => navigate("/profile")} // Navigate to Profile
@@ -108,7 +114,10 @@ const Profile = () => {
                   {/* Cart Button */}
                   <li>
                     <StyledWrapper>
-                      <div className="button-container" onClick={() => navigate("/cart")}>
+                      <div
+                        className="button-container"
+                        onClick={() => navigate("/cart")}
+                      >
                         <button
                           className="button"
                           onClick={() => navigate("/cart")} // Navigate to Cart
@@ -134,19 +143,19 @@ const Profile = () => {
                     </StyledWrapper>
                   </li>
                   <li>
-                  <StyledWrapper>
-                    <div
-                      className="button-container"
-                      onClick={() => navigate("/chatai")}
-                    >
-                      <button
-                        className="button"
+                    <StyledWrapper>
+                      <div
+                        className="button-container"
                         onClick={() => navigate("/chatai")}
-                      >       <MessageCircle className="icon" size={20} style={{ marginRight: 8 }} />AI
-                      </button>
-                    </div>
-                  </StyledWrapper>
-                </li>
+                      >
+                        <button
+                          className="button"
+                          onClick={() => navigate("/chatai")}
+                        >       <MessageCircle className="icon" size={20} style={{ marginRight: 8 }} />AI
+                        </button>
+                      </div>
+                    </StyledWrapper>
+                  </li>
                 </>
               )}
               <li>
@@ -174,7 +183,7 @@ const Profile = () => {
   
         {/* Main Content */}
         <div className={`main-contentt ${isOpen ? "shiftedd" : ""}`}>
-          <UserProfile />
+          <Chatai/>
         </div>
       </div>
     );
@@ -220,4 +229,4 @@ const Profile = () => {
   `;
   
 
-export default Profile
+export default Chataipage

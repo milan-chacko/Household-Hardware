@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { MessageCircle } from "lucide-react";
 import styled from "styled-components";
 import { Menu, X } from "lucide-react";
 import Home from "./Home";
@@ -61,7 +62,10 @@ const Usersidebar = () => {
                 {/* Home Button */}
                 <li>
                   <StyledWrapper>
-                    <div className="button-container"  onClick={() => navigate("/")}>
+                    <div
+                      className="button-container"
+                      onClick={() => navigate("/")}
+                    >
                       <button
                         className="button"
                         onClick={() => navigate("/")} // Navigate to Home
@@ -84,7 +88,10 @@ const Usersidebar = () => {
                 {/* Profile Button */}
                 <li>
                   <StyledWrapper>
-                    <div className="button-container" onClick={() => navigate("/profile")}>
+                    <div
+                      className="button-container"
+                      onClick={() => navigate("/profile")}
+                    >
                       <button
                         className="button"
                         onClick={() => navigate("/profile")} // Navigate to Profile
@@ -107,7 +114,10 @@ const Usersidebar = () => {
                 {/* Cart Button */}
                 <li>
                   <StyledWrapper>
-                    <div className="button-container" onClick={() => navigate("/cart")}>
+                    <div
+                      className="button-container"
+                      onClick={() => navigate("/cart")}
+                    >
                       <button
                         className="button"
                         onClick={() => navigate("/cart")} // Navigate to Cart
@@ -128,6 +138,20 @@ const Usersidebar = () => {
                           <circle r={1} cy={21} cx={20} />
                           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                         </svg>
+                      </button>
+                    </div>
+                  </StyledWrapper>
+                </li>
+                <li>
+                  <StyledWrapper>
+                    <div
+                      className="button-container"
+                      onClick={() => navigate("/chatai")}
+                    >
+                      <button
+                        className="button"
+                        onClick={() => navigate("/chatai")}
+                      >       <MessageCircle className="icon" size={20} style={{ marginRight: 8 }} />AI
                       </button>
                     </div>
                   </StyledWrapper>
